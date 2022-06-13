@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block additional_head %}
+<script src="{{ static('scripts/thoughts/left_hand.js') }}"></script>
+{% endblock %}
+{% block content %}
+<div class="floating_field large">
+	<Strong>Simplistic AI</Strong><br>
+	Jakob C. Hild 2021
+</div>
+{% for part in docx %}
+<div class="floating_box large">
+	{{ part | safe }}
+</div>
+{% endfor %}
+{% endblock %}

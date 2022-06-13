@@ -1,0 +1,30 @@
+{% extends "game_base.html" %}
+{% block additional_head %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+{% endblock %}
+{% block more_tabs %}
+Amount of Items: <span id="tAoi"></span><br><input type="range" id="pAoi" min="2" max="100" value="100"/><br>
+Sim Speed: <span id="tSpd"></span><br><input type="range" id="pSpd" min="1" max="120" value="30"/><br>
+Visualization: <select id="vis">
+    <option value="points">Points</option>
+    <option value="bars" selected>Bars</option>
+    <option value="spiral">Spiral</option>
+</select><br>
+Sort: <select id="srt">
+    <option value="selection" selected>Selection Sort</option>
+    <option value="bubble">Bubble Sort</option>
+    <option value="insertion">Insertion Sort</option>
+</select><br>
+Color Scheme: <select id="colors">
+    <option value="bw">Black on White</option>
+    <option value="wb" selected>White on Black</option>
+    <option value="cb">Colors on Black</option>
+    <option value="cw">Colors on White</option>
+</select><br>
+<button onclick="setup();">Start</button>
+{% endblock %}
+{% block content %}
+<div id="player" style="width: 800px;height: 800px;top: 70px;left: 220px;"></div>
+<script class="clean" src="{{ static('scripts/thoughts/sortingAlgsViewer.js') }}"></script>
+<div id="sort_desc" class="small floating_box"></div>
+{% endblock %}

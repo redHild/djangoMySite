@@ -1,0 +1,70 @@
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+}
+
+body {
+    background: linear-gradient(to left, #e7e7e7 0%, #002bec 100%);
+}
+
+#sideBar {
+    background-color: rgb(240, 248, 255, 0.5);;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    height: 85%;
+    bottom: 1%;
+    position: absolute;
+    min-width: 15em;
+}
+
+#midiParams {
+    background-color: rgb(240, 248, 255, 0.5); 
+    border: 2px solid #000000;
+    border-radius: 5px;
+    position: absolute;
+    left: 16em;
+    right: 0.5em;
+    height: 85%;
+    bottom: 1%;
+    text-align: center;
+}
+
+#defaultCanvas0 {
+    border: 2px solid #000000;
+    border-radius: 3.5px;
+    bottom: 4%;
+    left: 0.5em;
+    position: absolute;
+}
+
+#midiSelectors {
+    background-color: rgb(240, 248, 255, 0.5); 
+    border: 2px solid #000000;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.5em;
+}
+
+#title {
+    text-align: center;
+    height: 30%;
+}
+
+#bgdimg {
+    background-image: url(bgd.png);
+    position: absolute;
+    
+    left: -50%;
+    width: 200%;
+    height: 15%;
+    top: 2%;
+    transform: scale(0.5);
+}

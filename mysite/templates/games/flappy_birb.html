@@ -1,0 +1,14 @@
+{% extends "game_base.html" %}
+{% block additional_head %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+<img id="birb" src="{{ static('images/birb.png') }}" style="height:0%;width:0%;"/>
+{% endblock %}
+{% block more_tabs %}
+<h2>Controls</h2><hr>
+<p>Click to Jump!</p>
+<p>Press Space Bar or Click out of Game to Pause/Un-Pause.</p>
+{% endblock %}
+{% block content %}
+<div id="player" style="width: 800px;height: 800px;top: 70px;left: 220px;"></div>
+<script class="clean" src="{{ static('scripts/games/flappy_birb.js') }}"></script>
+{% endblock %}

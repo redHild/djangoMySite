@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="floating_field large">
+    <h2>Games</h2>
+</div>
+<div class="floating_box medium">
+    <ul style="text-align: left;">
+        <li><a href="static(spec-page-games/ai_music_gen_final_project-main/)">AI Music Gen</a></li>
+        <p>Ai Music Gen was my idea for a final Senior Project for my University. This link here is for documentation [<a href="https://docs.google.com/document/d/1k_x-DDMOiuqomkuMs_BYBzfRLQiH0LOfmtgAI2yScbU/edit?usp=sharing">Documentation</a>]. This next link is for more detailed information [<a href="https://docs.google.com/document/d/1gg-vFq0oriJQ_YYDXNfj2OLxnguFR6R5_XyO0rQfur8/edit?usp=sharing">Everything Else</a>].</p>
+        <li><a href="{{ url('robot_game') }}">Robot Game</a></li>
+        <p>Robot game is a remake of a game I made as a group project in my sophomore year of university.</p>
+        <li><a href="{{ url('flappy_birb') }}">Flappy Birb</a><br></li>
+        <p>This is a remake of Flappy Bird, this time, for the browser. It was made completely in JS using the P5.JS libraries.</p>
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block additional_head %}
+
+{% endblock %}
+{% block content %}
+<div class="floating_box large">
+    <p>
+        &emsp;Welcome to my <em>personal</em> website. I&#39;ve been learning a whole lot and want to post as much of what I&#39;ve
+        learned from my readings and experimenting and classes. I wish for this site to be useful for programming tips
+        and tricks. I plan on leaving examples of algorithms from Python and C++ and Java, there will be plenty of JS
+        as I&#39;ll be trying to translate all of my code to work on web pages.<br><br>Also, Here is my
+        <a href="{{ static('resume.pdf') }}">Resume</a>.<br><br>
+        Check out my home page, but as a <a href="{{ url('index_game') }}">GAME</a>!
+    </p>
+</div>
+<div class="floating_box small">
+    <h3>Secret Page</h3>
+    Key <input type="password" id="keyInput"/>
+    <br><br><input id="secret" type="button" onclick="checkField();" value= "???" />
+</div>
+<script src="{{ static('scripts/index.js') }}"></script>
+<script src="{{ static('scripts/bCrypt.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "game_base.html" %}
+{% block additional_head %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+{% endblock %}
+{% block more_tabs %}
+Horizontal Velocity Range: <span id="tHv"></span><br><input type="range" id="pHv" min="0" max="100" value="5"/><br>
+Vertical Velocity Range: <span id="tVv"></span><br><input type="range" id="pVv" min="0" max="100" value="25"/><br>
+Particle Size: <span id="tSize"></span><br><input type="range" id="pSize" min="1" max="100" value="1"/><br>
+Particle Decay Rate: <span id="tDec"></span><br><input type="range" id="pDec" min="1" max="25" value="1"/><br>
+Particle Per Frame: <span id="tAmt"></span><br><input type="range" id="pAmt" min="1" max="100" value="5"/><br>
+Gravity: <span id="tGrv"></span><br><input type="range" id="pGrv" min="-10" max="10" value="0"/><br>
+{% endblock %}
+{% block content %}
+<div id="player" style="width: 800px;height: 800px;top: 70px;left: 220px;"></div>
+<script class="clean" src="{{ static('scripts/thoughts/particles.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,19 @@
+
+body {
+    margin:0em;
+    padding: 0em;
+    overflow: hidden;
+}
+
+canvas {
+    margin:0em;
+    padding: 0em;
+}
+
+.ui {
+    background-color: rgba(237, 245, 225, .6);
+    text-align: center;
+    width: 100%;
+    position: absolute;
+
+}

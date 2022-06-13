@@ -1,0 +1,8 @@
+# robots.txt file for jchild.net
+# created December 1st, 2020
+
+User-agent: *
+Allow: /thoughts
+Allow: /games
+Allow: /tutoring
+Allow: /project_downloads

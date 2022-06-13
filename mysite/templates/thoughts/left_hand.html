@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block additional_head %}
+<script src="{{ static('scripts/thoughts/left_hand.js') }}"></script>
+{% endblock %}
+{% block content %}
+<div class="floating_field large">
+	<Strong>Left Hand Notation</Strong><br>
+	Jakob C. Hild 2019
+</div>
+<div class="floating_box large">
+	<h1>🅛🅔🅕🅣 🅗🅐🅝🅓 🅝🅞🅣🅐🅣🅘🅞🅝</h1>
+	<p>Left-Hand Notation is the name I've given to this infamous way of writing text. This is the name given because I cannot remember what it is normally called. Naturally, this form of mathematical notation is not really used at all... but hey, this way of notation was not really meant for people to use anyways. It was meant for computers. The basic idea is that we humans can read and understand parenthesis and PEMDAS just fine, but computers don't care as much about ordering, or at least back in the day they were hardwired to work equations in a specific order always. So, the idea came from wanting to basically simplify the process by throwing away parenthesis all together and putting it all in a way that the computer would prefer. Equations were written with the operator in front. The constants and variables would come afterward.</p>
+	<h2>+ 2 2</h2>
+	<p>Looking at the example above we can say that this would equate to 2 and 2 being added together.</p>
+	<h2>+ + 2 2 + 2 2</h2>
+	<p>This would equate to (2 + 2) + (2 + 2) = 8</p>
+	<h2>/ * + 2 2 2 8</h2>
+	<p>This would equate to ((2+2)*2)/8 = 1</p>
+	<h2>* / 8 2 + 2 2</h2>
+	<p>This would equate to (8/2)*(2+2) = 16</p>
+	<p>Notice how you normally would lose information in 8/2(2+2)...</p>
+	<p>This is because of how we might have difficulty viewing mathematical notation. Of course, following PEMDAS we find that it would come down to one. If you follow math from left to right with parenthesis still done first, you would always get 16. This is good news for left hand notation because we dont lose that sense of whether the equation wants us to use PEMDAS or not, which can become a problem depending on who you talk to and what people use the most.</p>
+	<p>In conclusion, it is a useful thing to use if you want to be distinct as possible; however, not so many people know it and it can be a pain to learn and read for people, especially when the equations start to get too long. For myself, I think I will stick to parenthesis because they give me just as much power and can be read easily by people. You also don't have to specify whether you are using PEMDAS or not when you use parenthesis for every operator in your equation. But, it is a fun nerdy thing to know and could even help you on your way to building simple circuits if you're into that kind of thing. One last thing, you can't necessarily use things like Sigma or Pi operations either. So it's not very easy to simplify many things down anyways.</p>
+</div>
+<div class="floating_box large">
+	<h2>LEFT HAND NOTATION CALCULATOR</h2>
+	<p>Every character should be separated by a space. The system takes in operators + - / * and can only take in constants as values. Those constants could be decimal numbers or not.</p>
+	<p>Example: / * + 2 2 2 8</p>
+	<p>Example: / + / / * + 2 - + 1.5 1.5 1 2 / * * 4 4 4 - * 6 + 2 2 4 2.5 + / - * * * 5 11 2 2 40 2 * 3 3 + 50 * 5 + 2 * 4 2</p>
+	<textarea id="eq" ></textarea><br><br>
+	<input type="button" value="Evaluate" onclick="doEvaluate();" />
+	<p id="out" class="clean" style="min-width:400px;min-height:200px;font-size:14px;text-align:center;"></p>
+</div>
+{% endblock %}

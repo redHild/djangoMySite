@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="floating_field small">
+	<p>
+		<h1>Welcome to my canvas testing page.</h1>
+		<h3>
+			This was just made for me to play with canvas in JavaScript/HTML.
+		</h3>
+	</p>
+</div>
+<div class="floating_box large" style="min-width: 600px;">
+	<p>
+		<h2>
+			Use this to make a nice square image.<br>
+			Sure you could make something nice with it...
+		</h2>
+		<canvas class="clean_floating_box" id="testingCanvas" height="600px" width="600px"></canvas><br>
+		Red <input id="rChange" type="range" min="0" max="255" value="0" onchange="rField();"/><br>
+		Green <input id="gChange" type="range" min="0" max="255" value="0" onchange="gField();"/><br>
+		Blue <input id="bChange" type="range" min="0" max="255" value="0" onchange="bField();"/><br>
+		<div class="clean" style="width:25px;height:25px;background-color:#000000;" id="colorShow"></div><br>
+		Size <input id="scalePoint" type="range" min="2" max="50" value="10" onchange="sField();"/><br>
+		<div id="showScale"></div>
+	</p>
+</div>
+<div class="floating_box large" style="min-width: 600px;">
+	<p>
+		<h2>Cardioid</h2>
+		<canvas class="clean_floating_box " id="cardioidCanvas" height="600px" width="600px"></canvas><br>
+		Add or Subtract Points
+		<input type="button" onClick="amtPoints--;document.getElementById('pointsChange').value = amtPoints;drawCardioid();" value="-"/>
+		<input type="button" onClick="amtPoints++;document.getElementById('pointsChange').value = amtPoints;drawCardioid();" value="+"/><br>
+		Points <input id="pointsChange" type="range" min="1" max="200" value="100" onchange="drawCardioid();"/>
+		<div id="showPoints"></div><br><hr>
+		Add or Subtract from Multiplier
+		<input type="button" onClick="multiplier--;document.getElementById('multChange').value = multiplier;drawCardioid();" value="-"/>
+		<input type="button" onClick="multiplier++;document.getElementById('multChange').value = multiplier;drawCardioid();" value="+"/><br>
+		Multipler <input id="multChange" type="range" min="1" max="200" value="2" onchange="drawCardioid();"/>
+		<div id="showMult"></div><br><hr>
+		Show Points <input id = "showText" type="checkbox" onclick="drawCardioid();" checked /><br>
+		Show Border <input id = "showBorder" type="checkbox" onclick="drawCardioid();" checked /><br>
+	</p>
+</div>
+<div class="floating_field large">
+	<p>
+		<h2>
+			This was a test page to see if some things were possible.<br>
+			To leave off this page on a good note, enjoy this picture<br>
+			of a fancy cat from The Snooty Pups.
+		</h2>
+		<img class="floating_box medium" src="{{ static('images/cat_portrait.jpg') }}" width="500" height="500" alt="Fancy Cat" style="padding: 0px"/>
+	</p>
+</div>
+<canvas>Please update your browser</canvas>
+<script src="{{ static('scripts/thoughts/canvas_testing.js') }}"></script>
+{% endblock %}

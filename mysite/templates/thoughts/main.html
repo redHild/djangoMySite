@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="floating_field large">
+    <h2>Thoughts</h2>
+</div>
+<div class="floating_box medium">
+    <ul style="text-align: left;">
+        <li><a href="{{ url('flow_field') }}">Flow Field</a></li>
+        <p>Perlin Noise Flow Field Generator</p>
+        <li><a href="{{ url('particles') }}">Particles</a></li>
+        <p>A particle creator.</p>
+        <li><a href="{{ url('sorting_algs_viewer') }}">Sorting Algorithms Viewer</a></li>
+        <p>A way to see the speed differences between a whole bunch of sorting algorithms and to see how they work visually.</p>
+        <li><a href="{{ url('canvas_testing') }}">Canvas Playtime</a><br></li>
+        <p>Canvas Playtime is about testing a few concepts using JS Canvas.</p>
+        <li><a href="{{ url('left_hand') }}">Left Hand Notation</a></li>
+        <p>Left Hand Notation is about a type of mathematical notation used in early computation. Simplistic in design and useful in arithmetic for computers, it's still used today, just not be humans... for the most part.</p>
+        <li><a href="{{ url('simplistic_ai') }}">Simplistic AI</a></li>
+        <p>This is a short, very brief overview of a whole bunch of algorithms in AI. This is partially here so I have a place to look back on the names of each algorithm and what the main purpose of each is.</p>
+
+    </ul>
+</div>
+{% endblock %}

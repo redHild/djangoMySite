@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="{{ static('images/jch_32.png') }}"/>
+        <title>{{ title }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ static('css/mainPageGamerStyle.css') }}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+
+        <script src="{{ static('scripts/indexDesktop/particles.js') }}"></script>
+        <script src="{{ static('scripts/indexDesktop/GameObject_WaterGun.js') }}"></script>
+        <script src="{{ static('scripts/indexDesktop/GameObject_Player.js') }}"></script>
+        <script src="{{ static('scripts/indexDesktop/addedBoids.js') }}"></script>
+        <script src="{{ static('scripts/indexDesktop/theGame.js') }}"></script>
+    </head>
+    <body>
+        <div class="ui" style="top: 0em;">
+            <h2>{{ env_vars.myname }}'s Personal Website | {{ env_vars.domain }}</h2>
+            <p>"WASD" will move the tank, point and click to shoot water at the clouds! watch them grow, then release rain.</p>
+            <p>Back to [<a href="{{ url('index') }}">Simple Home Page</a>] | <a href="{{ url('games') }}">Games</a> | <a href="{{ url('thoughts') }}">Thoughts</a> | <input type="password" id="keyInput"/><input id="secret" type="button" onclick="checkField();" value= "???" /></p>
+        </div>
+        <div class="ui" style="bottom: 0em;padding:1em;">
+            © 2020 {{ env_vars.domain }}<br>
+            <a href="{{ static('resume.pdf') }}">Resume</a> | <a href="{{ url('contact_me') }}">Contact Me</a>
+        </div>
+        <script src="{{ static('scripts/indexDesktop/indexGame.js') }}"></script>
+        <script src="{{ static('scripts/index.js') }}"></script>
+        <script src="{{ static('scripts/bCrypt.js') }}"></script>
+    </body>
+</html>

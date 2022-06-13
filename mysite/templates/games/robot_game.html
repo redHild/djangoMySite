@@ -1,0 +1,20 @@
+{% extends "game_base.html" %}
+{% block additional_head %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+{% endblock %}
+{% block more_tabs %}
+	<br>
+	Camera Distance: <input type="range" id="camDistance" min="100" max="800" value="200" /><br>
+	Player Speed: <input type="range" id="playerSpeed" min="1" max="800" value="100" /><br>
+	<h2>
+		Controls<br><hr>
+	</h2>
+	<p>
+		WASD - movement<br>
+		Press shift to Pick up or put down a block.
+	</p>
+{% endblock %}
+{% block content %}
+	<div id="player"></div>
+	<script class="clean" src="{{ static('scripts/games/robot_game.js') }}"></script>
+{% endblock %}

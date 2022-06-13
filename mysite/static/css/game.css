@@ -1,0 +1,18 @@
+#player {
+    top: 0px; left: 0px; right: 0px; bottom: 0px; position: fixed; z-index: -2;
+}
+
+.top_field {
+	padding-left: 30px; background-color: rgba(224, 224, 224, 0.75); height: 70px; position: absolute;
+	top: 0; left: 0; right: 0; z-index: 0;
+}
+
+.footer {
+	padding-left: 30px; background-color: rgba(224, 224, 224, 0.75);
+	height: 70px; position: fixed; bottom: 0; left: 0; right: 0;
+}
+
+.side_field {
+    padding: 10px; background-color: rgba(224, 224, 224, 0.75); overflow: hidden; width: 200px;
+    text-align: left; left: 0; top: 70px; position: absolute; z-index: -1;
+}

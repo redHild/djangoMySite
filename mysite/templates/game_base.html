@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="{{ static('images/jch_32.png') }}"/>
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Home</title>
+        {% endif %}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="{{ static('css/main.css') }}">
+        <meta name="Description" content="
+            This website was mostly made as a project for myself, but if you want to view
+            anything that I made, go ahead and do just that.
+        ">
+        {% block additional_head %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="top_field">
+            <h1 id="MAIN_TITLE_FIELD" style="color:#000000;">{{ env_vars.domain }} -
+                {% if title %}
+                <span style="color:#e02b2b">{{ title }}</span>
+                {% else %}
+                <span style="color:#e02b2b">Home</span>
+                {% endif %}
+            </h1>
+        </div>
+        <div class="side_field">
+            {% block more_tabs %}
+            {% endblock %}
+            <hr>
+            {{ html_templates.base_side_urls | safe }}
+        </div>
+        <div class="overlay">
+            <div class="side_img" style="background-image: url('{{ static('images/wrap.png') }}');"></div>
+            <center class="main_content">
+                {% block content %}
+                {% endblock %}
+            </center>
+            {{ html_templates.footer | safe }}
+        </div>
+    </body>
+</html>

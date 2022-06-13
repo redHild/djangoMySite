@@ -1,0 +1,15 @@
+{% extends "game_base.html" %}
+{% block additional_head %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+{% endblock %}
+{% block more_tabs %}
+Flow strength: <input id="getInc" type="range" width="500px" min="1" max="1000" value="150" /><div id="inc"></div><br>
+Change in time: <input id="getZ" type="range" width="500px" min="0" max="1000" value="150" /><div id="z"></div><br>
+Next amount of Objects on refresh: <input id="getAmt" type="range" width="500px" min="1" max="1000" value="150" /><div id="amt"></div><br>
+Color on <input type="checkbox" id="col" /><br><br>
+<input type="button" value="Refresh Screen" onclick="setup();"/><br>
+{% endblock %}
+{% block content %}
+<div id="player" class="clean" style="width: 800px;height: 800px;top: 70px;left: 220px;"></div>
+<script src="{{ static('scripts/thoughts/flow_field.js') }}"></script>
+{% endblock %}
